@@ -15,7 +15,11 @@ public interface EmployeeService {
 	
 	void deleteEmploye(String empId);
 	
-	List<Employe>getAllEmployes();
+	
+	
+	Iterable<Employe>getAllEmployes();
+	
+	
 	
 	
 
