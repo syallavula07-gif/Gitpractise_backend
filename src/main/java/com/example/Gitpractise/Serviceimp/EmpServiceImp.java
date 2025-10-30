@@ -1,7 +1,5 @@
 package com.example.Gitpractise.Serviceimp;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +15,7 @@ public class EmpServiceImp implements EmployeeService {
 	@Override
 	public Employe saveEmploye(Employe empp) {
 		
-		return repo.save(empp);
+		return repo.save(emp);
 	}
 
 	
@@ -30,20 +28,21 @@ public class EmpServiceImp implements EmployeeService {
 	@Override
 	public Employe updateEmployeById(Employe empp, String empId) {
 		Employe dbEmp=GetEmployeById(empId);
-		// if (dbEmp == null) return null;
-		   // dbEmp.setEmployeDetails(emp.get);
+		//if (dbEmp == null) return null;
+		   //dbEmp.setEmployeDetails(emp.getEmpId());
 		
 		return repo.findById(empId).orElse(dbEmp) ;
 	}
 
 	@Override
 	public void deleteEmploye(String empId) {
+		
 		repo.deleteById(empId);
 		
 	}
 
 	@Override
-	public List<Employe> getAllEmployes() {
+	public Iterable<Employe> getAllEmployes() {
 		
 		return repo.findAll();
 	}
