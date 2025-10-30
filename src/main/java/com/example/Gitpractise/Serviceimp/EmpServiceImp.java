@@ -15,20 +15,20 @@ public class EmpServiceImp implements EmployeeService {
 	private EmployeeRepo repo;
 	
 	@Override
-	public Employe saveEmploye(Employe emp) {
+	public Employe saveEmploye(Employe empp) {
 		
 		return repo.save(emp);
 	}
  
 	
-	@Override
+@Override
 	public Employe GetEmployeById(String empId) {
 		
 		return repo.findById(empId).orElse(null);
 	}
  
 	@Override
-	public Employe updateEmployeById(Employe emp, String empId) {
+	public Employe updateEmployeById(Employe empp, String empId) {
 		Employe dbEmp=GetEmployeById(empId);
 		// if (dbEmp == null) return null;
 		   // dbEmp.setEmployeDetails(emp.get);

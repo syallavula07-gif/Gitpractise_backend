@@ -7,11 +7,11 @@ import com.example.Gitpractise.entity.Employe;
 
 public interface EmployeeService {
 	
-	Employe saveEmploye(Employe emp);
+	Employe saveEmploye(Employe empp);
 	
 	Employe GetEmployeById(String empId);
 	
-	Employe updateEmployeById(Employe emp, String empId);
+	Employe updateEmployeById(Employe empp, String empId);
 	
 	void deleteEmploye(String empId);
 	
