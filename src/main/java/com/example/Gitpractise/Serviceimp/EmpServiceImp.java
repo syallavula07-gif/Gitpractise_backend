@@ -17,7 +17,7 @@ public class EmpServiceImp implements EmployeeService {
 	@Override
 	public Employe saveEmploye(Employe emp) {
 		
-		return repo.save(emp);)
+		return repo.save(emp);
 	}
 
 	
